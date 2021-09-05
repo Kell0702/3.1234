@@ -2,25 +2,29 @@ package ru.netology;
 
 public class Radio {
     String name;
-//    int [] nomber = {0,1,2,3,4,5,6,7,8,9};
     private int maxRadioStation = 9;
     private int minRadioStation = 0;
-    private int currentRadioStation = 0;
+    private int currentRadioStation = minRadioStation;
 
     public int switchingRadioStation(){
-        currentRadioStation = currentRadioStation;
         return currentRadioStation;
     }
+    public int swithingMaxRadioStation(){
+        return maxRadioStation;
+    }
+    public int swithingMinRadioStation(){
+        return minRadioStation;
+    }
     public int nextStation() {
-        int next = currentRadioStation + 1;
-        if (next < 9) ;
-        else next = 0;
+        int next = switchingRadioStation() + 1;
+        if (next < swithingMaxRadioStation()) ;
+        else next = swithingMinRadioStation();
         return next;
     }
     public int revStation(){
-        int rev = currentRadioStation - 1;
-        if (rev < 0);
-        else rev = 9;
+        int rev = switchingRadioStation() - 1;
+        if (rev > swithingMinRadioStation());
+        else rev = swithingMaxRadioStation();
         return rev;
     }
     public int nextRadioStation(){
@@ -30,7 +34,7 @@ public class Radio {
         return revStation();
     }
     public int setRadioStation(){
-        int setStation = int nomber;
+        int setStation = switchingRadioStation();
         return setStation;
     }
 
