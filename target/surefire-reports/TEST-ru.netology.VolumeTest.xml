@@ -17,7 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="RU"/>
     <property name="sun.boot.library.path" value="C:\Users\Kelaa\.jdks\adopt-openjdk-11.0.12\bin"/>
-    <property name="sun.java.command" value="C:\Users\Kelaa\AppData\Local\Temp\surefire11095706184459923815\surefirebooter6618061669781106554.jar C:\Users\Kelaa\AppData\Local\Temp\surefire11095706184459923815 2021-09-05T22-05-09_552-jvmRun1 surefire11619656377271029098tmp surefire_014639629323203738424tmp"/>
+    <property name="sun.java.command" value="C:\Users\Kelaa\AppData\Local\Temp\surefire12449279893113472535\surefirebooter13137025562106433110.jar C:\Users\Kelaa\AppData\Local\Temp\surefire12449279893113472535 2021-09-09T21-26-48_820-jvmRun1 surefire3609992344936107233tmp surefire_0337228989487782004tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\Kelaa\Desktop\3.1234\target\test-classes;C:\Users\Kelaa\Desktop\3.1234\target\classes;C:\Users\Kelaa\.m2\repository\org\junit\jupiter\junit-jupiter\5.4.2\junit-jupiter-5.4.2.jar;C:\Users\Kelaa\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.4.2\junit-jupiter-api-5.4.2.jar;C:\Users\Kelaa\.m2\repository\org\apiguardian\apiguardian-api\1.0.0\apiguardian-api-1.0.0.jar;C:\Users\Kelaa\.m2\repository\org\opentest4j\opentest4j\1.1.1\opentest4j-1.1.1.jar;C:\Users\Kelaa\.m2\repository\org\junit\platform\junit-platform-commons\1.4.2\junit-platform-commons-1.4.2.jar;C:\Users\Kelaa\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.4.2\junit-jupiter-params-5.4.2.jar;C:\Users\Kelaa\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.4.2\junit-jupiter-engine-5.4.2.jar;C:\Users\Kelaa\.m2\repository\org\junit\platform\junit-platform-engine\1.4.2\junit-platform-engine-1.4.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -33,7 +33,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\Kelaa\AppData\Local\Temp\surefire11095706184459923815\surefirebooter6618061669781106554.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Kelaa\AppData\Local\Temp\surefire12449279893113472535\surefirebooter13137025562106433110.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.12+7"/>

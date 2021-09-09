@@ -4,38 +4,56 @@ public class Radio {
     String name;
     private int maxRadioStation = 9;
     private int minRadioStation = 0;
-    private int currentRadioStation = minRadioStation;
+    public int currentRadioStation = minRadioStation;
 
-    public int switchingRadioStation(){
+    public int getRadioStation() {
         return currentRadioStation;
     }
-    public int swithingMaxRadioStation(){
+
+    public int getMaxRadioStation() {
         return maxRadioStation;
     }
-    public int swithingMinRadioStation(){
+
+    public int getMinRadioStation() {
         return minRadioStation;
     }
+
+    public void setCurrentRadioStation(int currentRadioStation) {
+        if (currentRadioStation < minRadioStation) {
+            return;
+        }
+        if (currentRadioStation > maxRadioStation) {
+
+            return;
+        }
+        this.currentRadioStation = currentRadioStation;
+    }
+
     public int nextStation() {
-        int next = switchingRadioStation() + 1;
-        if (next < swithingMaxRadioStation()) ;
-        else next = swithingMinRadioStation();
-        return next;
+        int newCurrentRadioStation = (setCurrentRadioStation(int currentRadioStation) + 1);
+        if (newCurrentRadioStation < getMaxRadioStation()) ;
+        else newCurrentRadioStation = getMinRadioStation();
+        return newCurrentRadioStation;
     }
-    public int revStation(){
-        int rev = switchingRadioStation() - 1;
-        if (rev > swithingMinRadioStation());
-        else rev = swithingMaxRadioStation();
-        return rev;
+
+    public int revStation() {
+        int newCurrentRadioStation = currentRadioStation - 1;
+        if (newCurrentRadioStation > getMaxRadioStation()) ;
+        else newCurrentRadioStation = maxRadioStation;
+        return currentRadioStation = newCurrentRadioStation;
     }
-    public int nextRadioStation(){
+
+    public int nextRadioStation() {
         return nextStation();
     }
-    public int prevRadioStation(){
+
+    public int prevRadioStation() {
         return revStation();
     }
-    public int setRadioStation(){
-        int setStation = switchingRadioStation();
-        return setStation;
+
+    public int setRadioStation1() {
+        int radio1 = 0;
+        return radio1;
     }
 
 }
