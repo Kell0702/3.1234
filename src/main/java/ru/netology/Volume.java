@@ -5,16 +5,35 @@ public class Volume {
     private int minVolume = 0;
     private int currentVolume = 3;
 
+    public int getMaxVolume(){
+        return maxVolume;
+    }
+    public int getMinVolume(){
+        return minVolume;
+    }
+    public int getCurrentVolume(){
+        return currentVolume;
+    }
+
+    public void setCurrentVolume(int currentVolume) {
+//        if (getCurrentVolume() < getMinVolume()) {
+//            return;
+//        }
+//        if (getCurrentVolume() > getMaxVolume()) {
+//            return;
+//        }
+        this.currentVolume = currentVolume;
+    }
     public int setUpVolume() {
-        int up = currentVolume + 1;
-        if (up < maxVolume) ;
-        else up = maxVolume;
-        return up;
+        setCurrentVolume(getCurrentVolume()+1);
+        if (currentVolume < getMaxVolume()) ;
+        else currentVolume = getMaxVolume();
+        return currentVolume;
     }
     public int setDownVolume(){
-        int down = currentVolume - 1;
-        if (down > minVolume);
-        else down = minVolume;
-        return down;
+        setCurrentVolume(getCurrentVolume()-1);
+        if (currentVolume > getMinVolume());
+        else currentVolume = getMinVolume();
+        return currentVolume;
     }
 }

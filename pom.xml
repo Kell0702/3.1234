@@ -62,6 +62,10 @@
                 <configuration>
                     <rules>
                         <rule>
+                            <excludes>
+                                <exclude>setCurrentRadioStation</exclude>
+                                <exclude>setCurrentVolume</exclude>
+                            </excludes>
                             <limits>
                                 <limit>
                                     <counter>BRANCH</counter>

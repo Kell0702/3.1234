@@ -19,4 +19,20 @@ public class VolumeTest {
         int expected = 2;
         assertEquals (expected , actual);
     }
+    @Test
+    public void shouldUpMaxVolum(){
+        Volume radio = new Volume();
+        radio.setCurrentVolume(radio.getMaxVolume());
+        int actual = radio.setUpVolume();
+        int expected = 10;
+        assertEquals (expected , actual);
+    }
+    @Test
+    public void shouldDownMinVolum(){
+        Volume radio = new Volume();
+        radio.setCurrentVolume(radio.getMinVolume());
+        int actual = radio.setDownVolume();
+        int expected = 0;
+        assertEquals (expected , actual);
+    }
 }

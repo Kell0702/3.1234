@@ -4,7 +4,7 @@ public class Radio {
     String name;
     private int maxRadioStation = 9;
     private int minRadioStation = 0;
-    public int currentRadioStation = minRadioStation;
+    private int currentRadioStation = minRadioStation;
 
     public int getRadioStation() {
         return currentRadioStation;
@@ -19,41 +19,78 @@ public class Radio {
     }
 
     public void setCurrentRadioStation(int currentRadioStation) {
-        if (currentRadioStation < minRadioStation) {
-            return;
-        }
-        if (currentRadioStation > maxRadioStation) {
-
-            return;
-        }
+//        if (getRadioStation() < getMinRadioStation()) {
+//            return;
+//        }
+//        if (getRadioStation() > getMaxRadioStation()) {
+//            return;
+//        }
         this.currentRadioStation = currentRadioStation;
     }
 
     public int nextStation() {
-        int newCurrentRadioStation = (setCurrentRadioStation(int currentRadioStation) + 1);
-        if (newCurrentRadioStation < getMaxRadioStation()) ;
-        else newCurrentRadioStation = getMinRadioStation();
-        return newCurrentRadioStation;
+        setCurrentRadioStation(getRadioStation() + 1);
+        if (currentRadioStation < getMaxRadioStation()) ;
+        else currentRadioStation = getMinRadioStation();
+        return currentRadioStation;
     }
 
     public int revStation() {
-        int newCurrentRadioStation = currentRadioStation - 1;
-        if (newCurrentRadioStation > getMaxRadioStation()) ;
-        else newCurrentRadioStation = maxRadioStation;
-        return currentRadioStation = newCurrentRadioStation;
+        setCurrentRadioStation(getRadioStation() - 1);
+        if (currentRadioStation > getMinRadioStation()) ;
+        else currentRadioStation = getMaxRadioStation();
+        return currentRadioStation;
     }
 
-    public int nextRadioStation() {
-        return nextStation();
+    public int setRadioStation0() {
+        setCurrentRadioStation(getMinRadioStation());
+        int radio = currentRadioStation;
+        return radio;
     }
-
-    public int prevRadioStation() {
-        return revStation();
-    }
-
     public int setRadioStation1() {
-        int radio1 = 0;
-        return radio1;
+        setCurrentRadioStation(getMinRadioStation());
+        int radio = setRadioStation0() + 1;
+        return radio;
+    }
+    public int setRadioStation2() {
+        setCurrentRadioStation(getMinRadioStation());
+        int radio = setRadioStation1() + 1;
+        return radio;
+    }
+    public int setRadioStation3() {
+        setCurrentRadioStation(getMinRadioStation());
+        int radio = setRadioStation2() + 1;
+        return radio;
+    }
+    public int setRadioStation4() {
+        setCurrentRadioStation(getMinRadioStation());
+        int radio = setRadioStation3() + 1;
+        return radio;
+    }
+    public int setRadioStation5() {
+        setCurrentRadioStation(getMinRadioStation());
+        int radio = setRadioStation4() + 1;
+        return radio;
+    }
+    public int setRadioStation6() {
+        setCurrentRadioStation(getMinRadioStation());
+        int radio = setRadioStation5() + 1;
+        return radio;
+    }
+    public int setRadioStation7() {
+        setCurrentRadioStation(getMinRadioStation());
+        int radio = setRadioStation6() + 1;
+        return radio;
+    }
+    public int setRadioStation8() {
+        setCurrentRadioStation(getMinRadioStation());
+        int radio = setRadioStation7() + 1;
+        return radio;
+    }
+    public int setRadioStation9() {
+        setCurrentRadioStation(getMinRadioStation());
+        int radio = setRadioStation8() + 1;
+        return radio;
     }
 
 }
