@@ -6,11 +6,11 @@ import lombok.NoArgsConstructor;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
+//@AllArgsConstructor
+//@NoArgsConstructor
+//@Data
 
 class RadioTest {
-    int number = 10;
-    int up = 1;
-    int down = -1;
 
     @Test
     public void shouldSwitchingRadioPlay() {
@@ -36,6 +36,7 @@ class RadioTest {
         int actual = 0;
         assertEquals(expected, actual);
     }
+
     @Test
     public void shouldMinRadioStation() {
         Radio radio = new Radio();
@@ -43,6 +44,7 @@ class RadioTest {
         int expected = 9;
         assertEquals(expected, actual);
     }
+
     @Test
     public void shouldMixNextRadioStation() {
         Radio radio = new Radio();
@@ -68,6 +70,7 @@ class RadioTest {
         int expected = 0;
         assertEquals(expected, actual);
     }
+
     @Test
     public void shouldDownRadioStation1() {
         Radio radio = new Radio();
@@ -76,6 +79,7 @@ class RadioTest {
         int expected = 1;
         assertEquals(expected, actual);
     }
+
     @Test
     public void shouldDownRadioStation2() {
         Radio radio = new Radio();
@@ -84,6 +88,7 @@ class RadioTest {
         int expected = 2;
         assertEquals(expected, actual);
     }
+
     @Test
     public void shouldDownRadioStation3() {
         Radio radio = new Radio();
@@ -92,6 +97,7 @@ class RadioTest {
         int expected = 3;
         assertEquals(expected, actual);
     }
+
     @Test
     public void shouldDownRadioStation4() {
         Radio radio = new Radio();
@@ -100,6 +106,7 @@ class RadioTest {
         int expected = 4;
         assertEquals(expected, actual);
     }
+
     @Test
     public void shouldDownRadioStation5() {
         Radio radio = new Radio();
@@ -108,6 +115,7 @@ class RadioTest {
         int expected = 5;
         assertEquals(expected, actual);
     }
+
     @Test
     public void shouldDownRadioStation6() {
         Radio radio = new Radio();
@@ -116,6 +124,7 @@ class RadioTest {
         int expected = 6;
         assertEquals(expected, actual);
     }
+
     @Test
     public void shouldDownRadioStation7() {
         Radio radio = new Radio();
@@ -124,6 +133,7 @@ class RadioTest {
         int expected = 7;
         assertEquals(expected, actual);
     }
+
     @Test
     public void shouldDownRadioStation8() {
         Radio radio = new Radio();
@@ -132,6 +142,7 @@ class RadioTest {
         int expected = 8;
         assertEquals(expected, actual);
     }
+
     @Test
     public void shouldDownRadioStation9() {
         Radio radio = new Radio();
