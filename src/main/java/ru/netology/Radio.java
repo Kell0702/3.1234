@@ -31,14 +31,11 @@ public class Radio<getMaxRadioStation> {
 
     public int nextStation() {
         setCurrentRadioStation(getRadioStation() + 1);
-        if (currentRadioStation < getMaxRadioStation()) {
-            return this.currentRadioStation;
-        }
-        if (currentRadioStation == getMaxRadioStation()) {
-        } else {
-            currentRadioStation = getMinRadioStation();
-        }
-        return this.currentRadioStation;
+//        if (currentRadioStation < getMaxRadioStation()) {
+//        } else {
+//            currentRadioStation = getMinRadioStation();
+//        }
+        return currentRadioStation;
     }
 
     public int revStation() {
