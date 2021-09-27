@@ -1,6 +1,6 @@
 package ru.netology;
 
-public class Radio {
+public class Radio<getMaxRadioStation> {
     String name = "Radio";
     private int maxRadioStation = 9;
     private int minRadioStation = 0;
@@ -23,6 +23,7 @@ public class Radio {
             return;
         }
         if (currentRadioStation > maxRadioStation) {
+            this.currentRadioStation = getMinRadioStation();
             return;
         }
         this.currentRadioStation = currentRadioStation;
@@ -31,10 +32,13 @@ public class Radio {
     public int nextStation() {
         setCurrentRadioStation(getRadioStation() + 1);
         if (currentRadioStation < getMaxRadioStation()) {
+            return this.currentRadioStation;
+        }
+        if (currentRadioStation == getMaxRadioStation()) {
         } else {
             currentRadioStation = getMinRadioStation();
         }
-        return currentRadioStation;
+        return this.currentRadioStation;
     }
 
     public int revStation() {
