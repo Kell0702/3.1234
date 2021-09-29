@@ -20,6 +20,7 @@ public class Radio<getMaxRadioStation> {
 
     public void setCurrentRadioStation(int currentRadioStation) {
         if (currentRadioStation < minRadioStation) {
+            this.currentRadioStation = getMaxRadioStation();
             return;
         }
         if (currentRadioStation > maxRadioStation) {
