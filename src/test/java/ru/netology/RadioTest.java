@@ -1,94 +1,97 @@
 package ru.netology;
 
-public class Radio<getMaxRadioStation> {
-    String name = "Radio";
-    private int maxRadioStation = 9;
-    private int minRadioStation = 0;
-    private int currentRadioStation = minRadioStation;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.junit.jupiter.api.Test;
 
-    public int getRadioStation() {
-        return currentRadioStation;
+import static org.junit.jupiter.api.Assertions.*;
+
+class RadioTest {
+
+    @Test
+    public void shouldSwitchingRadioPlay() {
+        Radio radio = new Radio();
+        int actual = radio.getRadioStation();
+        int expected = 0;
+        assertEquals(expected, actual);
     }
 
-    public int getMaxRadioStation() {
-        return maxRadioStation;
+    @Test
+    public void shouldNextRadioStation() {
+        Radio radio = new Radio();
+        int actual = radio.nextStation();
+        int expected = 1;
+        assertEquals(expected, actual);
     }
 
-    public int getMinRadioStation() {
-        return minRadioStation;
+    @Test
+    public void shouldMaxNextRadioStation() {
+        Radio radio = new Radio();
+        radio.setCurrentRadioStation(radio.getMaxRadioStation());
+        int expected = 0;
+        int actual = radio.nextStation();
+        assertEquals(expected, actual);
     }
 
-    public void setCurrentRadioStation(int currentRadioStation) {
-        if (currentRadioStation < minRadioStation) {
-            return;
-        }
-        if (currentRadioStation > maxRadioStation) {
-            this.currentRadioStation = getMinRadioStation();
-            return;
-        }
-        this.currentRadioStation = currentRadioStation;
-        return;
+    @Test
+    public void shouldMinRadioStation() {
+        Radio radio = new Radio();
+        int actual = radio.revStation();
+        int expected = 9;
+        assertEquals(expected, actual);
     }
 
-    public int nextStation() {
-        setCurrentRadioStation(getRadioStation() + 1);
-        return currentRadioStation;
+    @Test
+    public void shouldMixNextRadioStation() {
+        Radio radio = new Radio();
+        radio.setCurrentRadioStation(radio.getMinRadioStation());
+        int expected = 9;
+        int actual = radio.revStation();
+        assertEquals(expected, actual);
     }
 
-    public int revStation() {
-        setCurrentRadioStation(getRadioStation() - 1);
-        return currentRadioStation;
+    @Test
+    public void shouldSetRadioStation() {
+        Radio radio = new Radio();
+        int nomber = 5;
+        int expected = nomber;
+        int actual = radio.setRadioStation(nomber);
+        assertEquals(expected, actual);
     }
 
-    public int setRadioStation(int nomberStation) {
-        setCurrentRadioStation(nomberStation);
-        return this.currentRadioStation;
+
+    @Test
+    public void shouldUpVolum() {
+        Radio volume = new Radio();
+        int actual = volume.setUpVolume();
+        int expected = 4;
+        assertEquals(expected, actual);
     }
 
-    private int maxVolume = 10;
-    private int minVolume = 0;
-    private int currentVolume = 3;
-
-    public int getMaxVolume() {
-        return maxVolume;
+    @Test
+    public void shouldDownVolum() {
+        Radio volume = new Radio();
+        int actual = volume.setDownVolume();
+        int expected = 2;
+        assertEquals(expected, actual);
     }
 
-    public int getMinVolume() {
-        return minVolume;
+    @Test
+    public void shouldUpMaxVolum() {
+        Radio volume = new Radio();
+        volume.setCurrentVolume(volume.getMaxVolume());
+        int actual = volume.setUpVolume();
+        int expected = 10;
+        assertEquals(expected, actual);
     }
 
-    public int getCurrentVolume() {
-        return currentVolume;
+    @Test
+    public void shouldDownMinVolum() {
+        Radio volume = new Radio();
+        volume.setCurrentVolume(volume.getMinVolume());
+        int actual = volume.setDownVolume();
+        int expected = 0;
+        assertEquals(expected, actual);
     }
-
-    public void setCurrentVolume(int currentVolume) {
-        if (currentVolume < getMinVolume()) {
-            return;
-        }
-        if (currentVolume > getMaxVolume()) {
-            return;
-        }
-        this.currentVolume = currentVolume;
-    }
-
-    public int setUpVolume() {
-        setCurrentVolume(getCurrentVolume() + 1);
-        if (currentVolume < getMaxVolume()) {
-        } else {
-            currentVolume = getMaxVolume();
-        }
-        return currentVolume;
-    }
-
-    public int setDownVolume() {
-        setCurrentVolume(getCurrentVolume() - 1);
-        if (currentVolume > getMinVolume()) {
-        } else {
-            currentVolume = getMinVolume();
-        }
-        return currentVolume;
-    }
-
 }
-
-
